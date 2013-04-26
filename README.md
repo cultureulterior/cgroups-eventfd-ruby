@@ -19,9 +19,9 @@ CGroup.eventfd! #enroll this process into cgroup eventfd
 period = CGroup.eventfd.cpu.cfs_period_us? # read data from cgroups
 CGroup.eventfd.cpu.cfs_quota_us!(0.1 * period) #hard limit group cpu to 0.1 of machine capacity
 CGroup.eventfd.memory.usage_in_bytes.> 50.megabytes do #alert at 50 megabytes
-  printf "too much"
+  puts "too much"
 end
 CGroup.this.memory.usage_in_bytes.> 25.megabytes do #alert at 25 megabytes for a cgroup made of this process only
-  print "too much!"
+  puts "too much!"
 end
 ```
