@@ -12,7 +12,7 @@ For more information, read the kernel documentation
 - [Cpu cgroups](https://www.kernel.org/doc/Documentation/cgroups/cpuacct.txt)
 - [IO cgroups](https://www.kernel.org/doc/Documentation/cgroups/blkio-controller.txt)
 
-Proposed api
+### Proposed api
 
 ```ruby
 CGroup.eventfd! #enroll this process into cgroup eventfd
